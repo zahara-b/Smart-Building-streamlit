@@ -1,45 +1,53 @@
-# Expert System for Smart Building Energy Management
+# 🏢 Expert System for Smart Building Energy Management
 
 ## 📖 Introduction
-With the increasing energy consumption in buildings and the rapid expansion of smart building technologies, the need for systems capable of intelligently managing and optimizing energy usage has become more significant.  
-This project presents an **expert system** designed to manage and optimize energy consumption in smart buildings using human expert knowledge and rule-based reasoning.
+This project implements an **expert system** for smart building energy management.  
+The system uses **rule-based reasoning** to optimize lighting, heating, cooling, and ventilation, while ensuring **security, safety, and comfort**.  
+It is designed as part of the *Expert Systems* course project, combining academic rigor with practical implementation.
 
 ---
 
-## ⚙️ Features
-- Knowledge base with multiple **if–then rules** for energy management.  
-- Forward-chaining **inference engine** for decision-making.  
-- Interactive **user interface** built with Streamlit for simulation and visualization.  
-- Decision tables for structured representation of rules.  
-- Actions include control of **lighting, heating, cooling, and ventilation** systems.  
+## 🎯 Objectives
+- Reduce unnecessary energy consumption in smart buildings.  
+- Provide transparent and explainable decision-making through **if–then rules**.  
+- Integrate user preferences (e.g., sleep mode, party mode).  
+- Enhance safety and security (fire detection, intrusion alerts).  
+- Offer an interactive simulation environment via **Streamlit UI**.  
 
 ---
 
 ## 🏗️ System Architecture
-The system consists of:
-1. **Knowledge Base** – Expert rules for building management.  
-2. **Inference Engine** – Rule evaluation and decision-making.  
-3. **Working Memory** – Current state of the building (temperature, occupancy, light, air quality).  
-4. **User Interface** – Interactive simulation with Python/Streamlit.  
-5. **Actions** – Optimized control of building subsystems.  
+The system is composed of the following modules:
+
+1. **Knowledge Base** – Stores expert rules and decision tables.  
+2. **Inference Engine** – Evaluates rules and derives actions.  
+3. **Working Memory** – Holds current building states (temperature, occupancy, light, humidity).  
+4. **User Interface** – Built with Streamlit for simulation and visualization.  
+5. **Actions/Actuators** – Executes decisions (lighting, HVAC, alarms).  
 
 ---
 
-## 🚀 Installation & Usage
+## 📜 Sample Rules (Knowledge Base)
+- If no occupancy is detected and lights are ON → turn OFF lights.  
+- If temperature < 18°C → activate heating.  
+- If temperature > 28°C → activate cooling.  
+- If smoke is detected → stop ventilation and trigger alarm.  
+- If user mode = "Sleep" → dim lights and reduce noise.  
+- If user mode = "Party" → adjust lighting and ventilation accordingly.  
+
+---
+
+## ⚙️ Installation & Usage
 ### Requirements
 - Python 3.9+  
-- Libraries: `experta`, `streamlit`, `pandas`, `numpy`
+- Libraries: `experta`, `streamlit`, `pandas`, `numpy`, `matplotlib`
 
 ### Steps
-```bash
-# Clone the repository
-git clone https://github.com/your-username/smart-building-expert-system.git
 
-# Navigate to project folder
-cd smart-building-expert-system
 
 # Install dependencies
 pip install -r requirements.txt
 
 # Run the system
-streamlit run ui.py
+streamlit run appp.py
+
